@@ -29,7 +29,7 @@ const Banner = () => {
                     </p>
 
                     <Link
-                        href="/products"
+                        href="/"
                         className="mt-6 inline-flex items-center justify-center rounded-lg bg-green-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition duration-300 hover:bg-green-800 hover:shadow-lg"
                     >
                         সব পণ্য দেখুন
