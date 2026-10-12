@@ -26,6 +26,16 @@ const SignUpPage = () => {
             toast.error('Please Try Again')
         }
     }
+    const handleGoogleSignUp = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
+    const handleGithubSignUp = async () => {
+        const data = await authClient.signIn.social({
+            provider: "github"
+        })
+    }
 
     return (
         <div>
@@ -100,6 +110,7 @@ const SignUpPage = () => {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                                     <button
+                                        onClick={handleGoogleSignUp}
                                         type="button"
                                         className="btn h-12 bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 rounded-xl"
                                     >
@@ -108,6 +119,7 @@ const SignUpPage = () => {
                                     </button>
 
                                     <button
+                                        onClick={handleGithubSignUp}
                                         type="button"
                                         className="btn h-12 bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 rounded-xl"
                                     >
@@ -118,7 +130,6 @@ const SignUpPage = () => {
                             </div>
                         </div>
 
-                        {/* Back Home */}
                         <div className="text-center mt-6">
                             <Link
                                 href="/"
