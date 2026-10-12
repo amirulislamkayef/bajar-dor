@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 
-const SignInPage = () => {
+const SignUpPage = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault()
@@ -35,7 +35,7 @@ const SignInPage = () => {
 
                         <div className="text-center mb-8">
                             <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-                                সাইন ইন করুন
+                                সাইন আপ করুন
                             </h1>
 
                             <p className="text-gray-500 mt-3 text-base">
@@ -88,7 +88,7 @@ const SignInPage = () => {
                                         type="submit"
                                         className="btn w-full mt-5 h-12 bg-green-700 hover:bg-green-800 text-white border-none rounded-xl text-base shadow-md"
                                     >
-                                        সাইন ইন করুন
+                                        সাইন আপ করুন
                                     </button>
 
                                 </fieldset>
@@ -115,17 +115,6 @@ const SignInPage = () => {
                                     </button>
 
                                 </div>
-
-                                <p className="text-center text-sm text-gray-600 mt-7">
-                                    অ্যাকাউন্ট নেই?{' '}
-                                    <a
-                                        href="/signup"
-                                        className="text-green-700 font-semibold hover:underline"
-                                    >
-                                        সাইন আপ করুন
-                                    </a>
-                                </p>
-
                             </div>
                         </div>
 
@@ -146,5 +135,5 @@ const SignInPage = () => {
     );
 };
 
-export default SignInPage;
+export default SignUpPage;
 

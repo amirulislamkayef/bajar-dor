@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import UserInfo from './UserInfo';
 import NavLinks from './NavLinks';
 
 
@@ -34,22 +34,8 @@ const Header = () => {
                         </p>
                     </div>
                 </div>
+                <UserInfo></UserInfo>
 
-                <div className="flex items-center gap-3 sm:gap-6">
-                    <Link
-                        href="/sign-in"
-                        className="text-sm font-semibold text-gray-700 transition hover:text-green-700"
-                    >
-                        সাইন ইন
-                    </Link>
-
-                    <Link
-                        href="/sign-up"
-                        className="rounded-lg bg-green-700 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-green-800"
-                    >
-                        সাইন আপ
-                    </Link>
-                </div>
             </div>
             <NavLinks></NavLinks>
         </header>
