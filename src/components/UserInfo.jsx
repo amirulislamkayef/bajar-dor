@@ -9,6 +9,10 @@ const UserInfo = () => {
 
     const user = session?.user;
 
+    const handleSignOut = async() =>{
+        await authClient.signOut()
+    }
+
     if (isPending) {
         return (
             <div className="flex items-center gap-3">
@@ -36,6 +40,12 @@ const UserInfo = () => {
                             {user.email}
                         </p>
                     </div>
+                    <button
+                        onClick={handleSignOut}
+                        className="rounded-lg border border-red-200 bg-white px-3 py-2.5 text-sm font-semibold text-red-600 transition hover:bg-red-50 sm:px-4"
+                    >
+                        সাইন আউট
+                    </button>
                 </div>
             ) : (
                 <div className="flex items-center gap-2 sm:gap-3">
