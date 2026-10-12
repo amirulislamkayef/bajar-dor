@@ -37,14 +37,14 @@ const Header = () => {
 
                 <div className="flex items-center gap-3 sm:gap-6">
                     <Link
-                        href="/signin"
+                        href="/sign-in"
                         className="text-sm font-semibold text-gray-700 transition hover:text-green-700"
                     >
                         সাইন ইন
                     </Link>
 
                     <Link
-                        href="/signup"
+                        href="/sign-up"
                         className="rounded-lg bg-green-700 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-green-800"
                     >
                         সাইন আপ
