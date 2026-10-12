@@ -9,7 +9,7 @@ const UserInfo = () => {
 
     const user = session?.user;
 
-    const handleSignOut = async() =>{
+    const handleSignOut = async () => {
         await authClient.signOut()
     }
 
@@ -27,9 +27,11 @@ const UserInfo = () => {
             {user ? (
                 <div className="flex items-center gap-3 rounded-xl border border-green-100 bg-white px-3 py-2 shadow-sm sm:px-4">
 
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100 text-lg font-bold uppercase text-green-700">
-                        {user.name?.charAt(0) || user.email?.charAt(0) || 'U'}
-                    </div>
+                    <Link href={'/profile'}>
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100 text-lg font-bold uppercase text-green-700">
+                            {user.name?.charAt(0) || user.email?.charAt(0) || 'U'}
+                        </div>
+                    </Link>
 
                     <div className="min-w-0">
                         <h2 className="max-w-36 truncate text-sm font-bold text-gray-800 sm:max-w-48">
